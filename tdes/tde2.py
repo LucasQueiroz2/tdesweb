@@ -1,13 +1,3 @@
-'''
-8. Um número perfeito é um número que é igual à soma de seus divisores,
-excluindo ele mesmo. Crie um programa que verifique se um número
-informado pelo usuário é perfeito.
-9. Crie um programa que gere a sequência de Fibonacci até o n-ésimo termo,
-onde o primeiro e o segundo termo são 0 e 1, e os termos seguintes são a
-soma dos dois termos anteriores.
-10.Peça ao usuário para inserir dois números: um número base e um limite. Em
-seguida, multiplique o número base por 1, 2, 3 até o limite e mostre a
-tabuada.'''
 '''num=int(input('digite um numero:'))
 if num>0:
     print('numero positivo')
@@ -64,4 +54,34 @@ print(f'o fatorial é {fatorial}')
 num1=input('digite um numero1:')
 x=len(num1)
 print(f'numero de digitos é {x}')
+'''
+'''
+num1 = int(input('Digite um número: '))
+y = int(input('Digite até qual número deseja verificar: '))
+soma = 0
+for x in range(1, y):  
+    if num1 % x == 0:
+        soma += x
+if soma == num1:
+    print(f'{num1} é um número perfeito')
+else:
+    print(f'{num1} não é um número perfeito')
+'''
+
+n1 = int(input('Digite quantos números da sequência de Fibonacci deseja calcular: '))
+
+a, b = 0, 1
+
+for _ in range(n1):
+    print(a, end=' ')
+    a, b = b, a + b
+
+'''
+num1 = int(input('Digite um número: '))
+limite=int(input('digite um num limite'))
+res=0
+
+for x in range(0,limite):
+    res=num1*x
+    print(f'{res}')
 '''
